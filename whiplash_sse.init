@@ -1,0 +1,21 @@
+#!/sbin/runscript
+
+CTLDIR="/home/django/whiplash_sse/"
+
+
+depend() {
+        need rabbitmq
+}
+
+start() {
+        ebegin "Starting whiplash Server-Sent Events Server"
+        ${CTLDIR}/whipssectrl start
+        eend $? "Failed to start whiplash_sse"
+}
+
+stop() {
+# not working
+        ebegin "Stopping whiplash Server-Sent Events Server"
+        ${CTLDIR}/whipssectrl stop
+        eend $? "Failed to stop whiplash_sse"
+}
