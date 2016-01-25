@@ -1,0 +1,9 @@
+%% -*- erlang -*-
+{application, whiplash_sse,
+ [{description, "whiplash_sse"},
+  {vsn, "0.1"},
+  {modules, []},
+  {registered, []},
+  {mod, {'whiplash_sse_app', []}},
+  {env, [{credentials, "http://nevihta.d87:4000"}]},
+  {applications, [kernel, stdlib, crypto]}]}.
